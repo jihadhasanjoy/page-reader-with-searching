@@ -1,0 +1,22 @@
+<header class="header">
+  <h2>Reader with searching</h2>
+</header>
+<main class="main">
+  <ul class="vertical-menu">
+    <ng-container *ngFor="let item of values; let itemIndex = index">
+      <li (click)="onClickItem(item, itemIndex)" [ngClass]="{'active':selectIndex == itemIndex}">{{item.title}}
+      </li>
+    </ng-container>
+  </ul>
+  <div class="main-content">
+    <div class="search" *ngIf="text">
+      <div>
+        <label for="search">Find relative content</label>
+        <input [(ngModel)]="searchText" type="search" name="search" placeholder="Search...">
+      </div>
+      <button>Find</button>
+    </div>
+    <div class="text-contaniner" [innerHtml]="text | safeHtml | highlighter: searchText: 'full'">
+    </div>
+  </div>
+</main>

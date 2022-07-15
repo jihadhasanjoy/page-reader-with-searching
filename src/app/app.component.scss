@@ -1,0 +1,99 @@
+.main {
+  display: flex;
+}
+
+.header {
+  padding: 1rem;
+  text-align: center;
+  background-color: #0a192f;
+  grid-area: header;
+  height: 70px;
+  border-bottom: 1px solid #fff;
+  box-shadow: 1px 1px 8px 0px rgb(247 247 247);
+}
+
+.header h2 {
+  font-size: 1.7rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.vertical-menu {
+  height: calc(100vh - 70px);
+  width: 20%;
+  overflow: auto;
+  border-right: 2px solid yellowgreen;
+}
+
+.vertical-menu li {
+  color: #f2f2f2;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.main-content {
+  width: 80%;
+  padding: 1.5rem;
+}
+
+.vertical-menu li.active {
+  border-bottom: 1px solid yellowgreen;
+  cursor: pointer;
+  background-color: #326400;
+  color: yellow;
+}
+
+.main {
+  height: calc(100vh - 70px);
+}
+
+.search {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: end;
+}
+
+.search label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: .3rem;
+}
+
+.search input {
+  display: block;
+  padding: .7rem;
+  width: 20rem;
+  border: 2px solid #000;
+  border-radius: 3px;
+  outline: none;
+}
+
+.search button {
+  display: block;
+  border: 1px solid #000;
+  outline: none;
+  padding: .7rem 1rem;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: yellow;
+  font-weight: 700;
+}
+
+.tab-warpper h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.tab-warpper p {
+  font-size: .9rem;
+}
+
+::ng-deep .highlighted-text {
+  background-color: yellow;
+  color: #0a192f;
+}
